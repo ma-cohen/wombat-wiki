@@ -1,0 +1,20 @@
+# Situational context — business, organizational, and environmental facts
+# that inform vision and all project decisions.
+#
+# Each context item has:
+#   id          - Unique identifier (e.g. CTX-001)
+#   description - One-liner factual statement about the situation
+
+contexts:
+  - id: CTX-001
+    description: "Single user — personal knowledge management, no team collaboration needed"
+  - id: CTX-002
+    description: "User captures thoughts as quick brain-dumps, not structured writing"
+  - id: CTX-003
+    description: "User has tried Obsidian and Notion but neither auto-organizes or deduplicates well"
+  - id: CTX-004
+    description: "Free solutions preferred; self-hosting is acceptable"
+  - id: CTX-005
+    description: "Knowledge spans all domains: dev learnings, ideas, book notes, random observations"
+  - id: CTX-006
+    description: "Key pain: raw dumps stay messy — no auto-categorization, deduplication, or clear summaries"
