@@ -1,5 +1,0 @@
-# Vision, mission, and core problem
-productName: "wombat-wiki"
-vision: "A git repo where you brain-dump thoughts to any AI agent and get back a clean, organized, browsable knowledge base in Obsidian"
-mission: "Remove all friction between having a thought and having it filed, summarized, and findable — your AI agent of choice does the organizing, you do the thinking"
-problem: "Personal knowledge tools require manual organization — raw brain-dumps stay messy, ideas get duplicated, and nothing gets summarized. Any AI agent with file access can be the organizer with zero extra tooling, making this a universal pattern not tied to one specific tool"
