@@ -131,6 +131,21 @@ ww travel-wiki
 This creates the GitHub repo from the template, clones it locally, and drops
 you into the folder — ready to open in your AI agent.
 
+## `ob-open` Shortcut
+
+Open the current folder as an Obsidian vault from the terminal:
+
+```powershell
+ob-open
+```
+
+Add to your PowerShell `$PROFILE` (`Microsoft.PowerShell_profile.ps1`):
+```powershell
+function ob-open { cmd /c "start obsidian://open?path=%CD%" }
+```
+
+Reload your profile (`. $PROFILE`) and run `ob-open` from any wiki folder to launch it instantly in Obsidian.
+
 ## Customizing Agent Behavior
 
 Edit `AGENT.md` to change how the agent works — adjust the note format,
