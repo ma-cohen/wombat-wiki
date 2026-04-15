@@ -112,7 +112,15 @@ function ww
 end
 ```
 
-After adding it, reload your shell (`source ~/.bashrc` / `source ~/.zshrc`) and use it:
+**PowerShell** — add to your `$PROFILE` (`Microsoft.PowerShell_profile.ps1`):
+```powershell
+function ww {
+  param([string]$name)
+  gh repo create $name --template ma-cohen/wombat-wiki --clone && Set-Location $name
+}
+```
+
+After adding it, reload your shell (`source ~/.bashrc` / `source ~/.zshrc` / `. $PROFILE`) and use it:
 
 ```bash
 ww cooking-wiki
