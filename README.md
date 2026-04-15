@@ -36,7 +36,7 @@ Works with any agent that can read and write files:
 - GitHub Copilot (Workspace mode)
 - ChatGPT (with file tools)
 
-The agent automatically reads `AGENT.md` for instructions.
+The agent automatically reads `CLAUDE.md` for instructions.
 
 ### 3. Brain-dump
 
@@ -55,18 +55,20 @@ The agent handles categorization, summaries, and deduplication.
 
 ### 4. Browse in Obsidian
 
-Open this repo folder as an Obsidian vault. You get:
-- File tree organized by category
-- Full-text search across all notes
-- Graph view showing connections
-- Beautiful markdown rendering
+Open the repo folder as a new Obsidian vault:
+
+1. Open Obsidian → **Open folder as vault**
+2. Select your cloned repo folder
+
+Obsidian's config (`.obsidian/`) is intentionally not tracked in git — each user gets their own fresh vault with their own settings.
 
 ## Structure
 
 ```
 /
-├── AGENT.md          ← Instructions for the AI agent (don't delete)
+├── CLAUDE.md         ← Instructions for the AI agent (don't delete)
 ├── README.md         ← This file
+├── .gitignore        ← Excludes .obsidian/ (each user has their own vault config)
 ├── dev/              ← Created by the agent as needed
 │   └── *.md
 ├── ideas/
@@ -148,5 +150,5 @@ Reload your profile (`. $PROFILE`) and run `ob-open` from any wiki folder to lau
 
 ## Customizing Agent Behavior
 
-Edit `AGENT.md` to change how the agent works — adjust the note format,
+Edit `CLAUDE.md` to change how the agent works — adjust the note format,
 add domain-specific rules, or restrict which categories are allowed.
