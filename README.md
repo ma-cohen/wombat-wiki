@@ -86,6 +86,43 @@ gh repo create work-wiki    --template ma-cohen/wombat-wiki --clone
 
 Each is fully independent with its own categories and notes.
 
+## `ww` Shortcut
+
+Add the `ww` function to your shell profile so you can spin up a new
+knowledge base in one command.
+
+**bash** — add to `~/.bashrc` or `~/.bash_profile`:
+```bash
+ww() {
+  gh repo create "$1" --template ma-cohen/wombat-wiki --clone && cd "$1"
+}
+```
+
+**zsh** — add to `~/.zshrc`:
+```zsh
+ww() {
+  gh repo create "$1" --template ma-cohen/wombat-wiki --clone && cd "$1"
+}
+```
+
+**fish** — add to `~/.config/fish/functions/ww.fish`:
+```fish
+function ww
+  gh repo create $argv[1] --template ma-cohen/wombat-wiki --clone && cd $argv[1]
+end
+```
+
+After adding it, reload your shell (`source ~/.bashrc` / `source ~/.zshrc`) and use it:
+
+```bash
+ww cooking-wiki
+ww dev-wiki
+ww travel-wiki
+```
+
+This creates the GitHub repo from the template, clones it locally, and drops
+you into the folder — ready to open in your AI agent.
+
 ## Customizing Agent Behavior
 
 Edit `AGENT.md` to change how the agent works — adjust the note format,
