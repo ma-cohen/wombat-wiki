@@ -22,7 +22,7 @@ No scripts. No API keys. No subscriptions. Just a repo and an AI agent.
 
 Using GitHub CLI:
 ```bash
-gh repo create my-kb-name --template ma-cohen/wombat-wiki --clone
+gh repo create my-kb-name --template ma-cohen/wombat-wiki --private --clone
 cd my-kb-name
 ```
 
@@ -79,9 +79,9 @@ Open this repo folder as an Obsidian vault. You get:
 Create as many as you need:
 
 ```bash
-gh repo create cooking-wiki --template ma-cohen/wombat-wiki --clone
-gh repo create travel-wiki  --template ma-cohen/wombat-wiki --clone
-gh repo create work-wiki    --template ma-cohen/wombat-wiki --clone
+gh repo create cooking-wiki --template ma-cohen/wombat-wiki --private --clone
+gh repo create travel-wiki  --template ma-cohen/wombat-wiki --private --clone
+gh repo create work-wiki    --template ma-cohen/wombat-wiki --private --clone
 ```
 
 Each is fully independent with its own categories and notes.
@@ -94,21 +94,21 @@ knowledge base in one command.
 **bash** — add to `~/.bashrc` or `~/.bash_profile`:
 ```bash
 ww() {
-  gh repo create "$1" --template ma-cohen/wombat-wiki --clone && cd "$1"
+  gh repo create "$1" --template ma-cohen/wombat-wiki --private --clone && cd "$1"
 }
 ```
 
 **zsh** — add to `~/.zshrc`:
 ```zsh
 ww() {
-  gh repo create "$1" --template ma-cohen/wombat-wiki --clone && cd "$1"
+  gh repo create "$1" --template ma-cohen/wombat-wiki --private --clone && cd "$1"
 }
 ```
 
 **fish** — add to `~/.config/fish/functions/ww.fish`:
 ```fish
 function ww
-  gh repo create $argv[1] --template ma-cohen/wombat-wiki --clone && cd $argv[1]
+  gh repo create $argv[1] --template ma-cohen/wombat-wiki --private --clone && cd $argv[1]
 end
 ```
 
@@ -116,7 +116,7 @@ end
 ```powershell
 function ww {
   param([string]$name)
-  gh repo create $name --template ma-cohen/wombat-wiki --clone && Set-Location $name
+  gh repo create $name --template ma-cohen/wombat-wiki --private --clone && Set-Location $name
 }
 ```
 
