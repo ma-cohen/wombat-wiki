@@ -38,20 +38,23 @@ Works with any agent that can read and write files:
 
 The agent automatically reads `CLAUDE.md` for instructions.
 
-### 3. Brain-dump
+### 3. Add notes with `/add`
 
-Just talk to your agent:
+Use the `/add` command to save a thought:
 
-> "I just learned that React's useEffect cleanup function runs before the
-> next effect, not after the component unmounts."
+```
+/add I just learned that React's useEffect cleanup runs before the next effect, not after unmount
+```
 
-> "Idea: a browser extension that summarizes the current page into bullet
-> points and saves it here."
+```
+/add Idea: a browser extension that summarizes the current page into bullet points and saves it here
+```
 
-> "Finished Atomic Habits. Main takeaway: habits are about identity, not
-> outcomes."
+```
+/add Finished Atomic Habits. Main takeaway: habits are about identity, not outcomes
+```
 
-The agent handles categorization, summaries, and deduplication.
+The agent handles categorization, summaries, and deduplication. You can still chat with the agent normally about your notes — it won't save anything unless you use `/add`.
 
 ### 4. Browse in Obsidian
 
